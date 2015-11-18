@@ -1,0 +1,60 @@
+body{
+    background: #f5f5f5;
+    background-image: url("http://www.justingillphoto.com/blog/wp-content/uploads/2014/12/Tala-Disney-Hall-63.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+#company_name{
+    font-family: 'Rochester', cursive;
+    color: #fff;
+    font-size: 60px;
+}
+
+#company_desc{
+    color: #fff;
+    margin-top: 110px;
+}
+
+#shop-box-wrapper{
+    overflow:auto;
+}
+.shop-box {
+    background: transparent;
+    width: 120px;
+    border: 2px solid #fff;
+    float: right;
+    margin-right: 100px;
+}
+
+.shop-box p{
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 770px){
+    .navbar-default{
+        margin-top: 0px;
+    }
+    #company_name{
+        font-size: 30px;
+    }
+    #company_desc{
+        font-size: 10px;
+        margin-top: 50px;
+    }
+
+    .shop-box {
+
+        width: 60px;
+        float: right;
+        margin-right: 50px;
+    }
+}
