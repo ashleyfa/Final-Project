@@ -4,21 +4,23 @@ body{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
-
 
 #company_name{
     font-family: 'Rochester', cursive;
     color: #fff;
-    font-size: 60px;
+    font-size: 80px;
 }
 
+#company_desc_wrap{
+    margin-top: 15%;
+}
 #company_desc{
     color: #fff;
-    margin-top: 110px;
+    font-size: 20px;
 }
 
 #shop-box-wrapper{
@@ -26,15 +28,15 @@ body{
 }
 .shop-box {
     background: transparent;
-    width: 120px;
+    width: 15%;
     border: 2px solid #fff;
     float: right;
-    margin-right: 100px;
+    margin-right: 15%;
 }
 
 .shop-box p{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5%;
     color: #fff;
 }
 
@@ -44,17 +46,31 @@ body{
         margin-top: 0px;
     }
     #company_name{
-        font-size: 30px;
+        font-size: 60px;
+        margin: 0 auto;
     }
     #company_desc{
-        font-size: 10px;
-        margin-top: 50px;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 50%;
     }
 
     .shop-box {
-
-        width: 60px;
+        width: 100px;
         float: right;
         margin-right: 50px;
     }
 }
+
+@media screen and (max-width: 700px) {
+    #company_name{
+        font-size: 50px;
+    }
+    #company_desc{
+        font-size: 12px;
+        margin-top: 50%;
+    }
+
+}
+
+
