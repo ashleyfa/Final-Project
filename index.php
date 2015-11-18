@@ -47,15 +47,17 @@
     </header>
     <section id="main">
         <div class="container">
-            <p id = "company_desc" style="text-align: right"><span id="company_name">Downtown Fashion</span><br>YOUR ONE STOP SHOP FOR ALL YOUR FORMAL WEAR
-            </p>
-            <a href="home.html">
-                <div id = "shop-box-wraper">
-                    <div class="shop-box">
-                        <p>SHOP NOW</p>
+            <div id="company_desc_wrap">
+                <p id = "company_desc" style="text-align: right"><span id="company_name">Downtown Fashion</span><br>YOUR ONE STOP SHOP FOR ALL YOUR FORMAL WEAR
+                </p>
+                <a href="home.html">
+                    <div id = "shop-box-wraper">
+                        <div class="shop-box">
+                            <p>SHOP NOW</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </section>
 
