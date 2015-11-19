@@ -1,0 +1,68 @@
+body{
+    background: #f1f1f1;
+}
+
+header, nav, section, footer{display: block;}
+
+p{
+    font-family: Helvetica, sans-serif;
+}
+
+a{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+hr{
+    display: block;
+    border: 0;
+    border-top: 3px solid #006687;
+    margin-bottom: 0px;
+    padding: 0;
+
+}
+
+#header_desc{
+    background: #fff;
+    width: 100%;
+    height: auto;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.75);
+}
+
+.company_name{
+    font-family: 'Rochester', cursive;
+    color: #000;
+    font-size: 60px;
+    text-align: center;
+}
+
+#home{
+    position: relative;
+    height: auto;
+    width: 100%;
+    background: #fff;
+}
+
+
+#home2{
+    margin-top: 30px;
+}
+
+.bottomText{
+    color: #006687;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+}

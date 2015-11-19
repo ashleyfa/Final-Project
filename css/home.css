@@ -1,26 +1,27 @@
 body{
-    background: #f5f5f5;
-    background-image: url("http://www.justingillphoto.com/blog/wp-content/uploads/2014/12/Tala-Disney-Hall-63.jpg");
+    background: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: cover;
 
 }
 
+/*
+MAIN PAGE
+*/
 #company_name{
     font-family: 'Rochester', cursive;
     color: #fff;
-    font-size: 80px;
+    font-size: 90px;
 }
 
-#company_desc_wrap{
-    margin-top: 15%;
-}
 #company_desc{
     color: #fff;
     font-size: 20px;
+    text-align: right;
+    margin-top: 150px;
+    margin-right: 60px;
 }
 
 #shop-box-wrapper{
@@ -31,7 +32,7 @@ body{
     width: 15%;
     border: 2px solid #fff;
     float: right;
-    margin-right: 15%;
+    margin-right: 60px;
 }
 
 .shop-box p{
@@ -41,36 +42,36 @@ body{
 }
 
 
-@media screen and (max-width: 770px){
-    .navbar-default{
-        margin-top: 0px;
-    }
+@media screen and (max-width: 680px){
     #company_name{
-        font-size: 60px;
+        font-size: 75px;
+    }
+    #company_desc{
+        margin-right: 0px;
+    }
+    .shop-box{
+        width: 50%;
+        float: none;
         margin: 0 auto;
     }
+
+}
+
+
+@media screen and (max-width: 400px){
+    #company_name{
+        font-size: 53px;
+    }
+
     #company_desc{
+        margin-top: 100%;
         font-size: 12px;
         text-align: center;
-        margin-top: 50%;
+        margin-right: 0px;
     }
-
     .shop-box {
-        width: 100px;
-        float: right;
-        margin-right: 50px;
+        width: 50%;
+        float: none;
+        margin: 0 auto;
     }
 }
-
-@media screen and (max-width: 700px) {
-    #company_name{
-        font-size: 50px;
-    }
-    #company_desc{
-        font-size: 12px;
-        margin-top: 50%;
-    }
-
-}
-
-
