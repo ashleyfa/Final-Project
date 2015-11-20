@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="col-sm-4 col-md-4">
                             <a href="">
                                 <div class="well">
                                     <p>SHOP<br><span class="bottomText"><b>MENS</b></span></p>
@@ -38,14 +38,14 @@
                             </a>
 
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="col-sm-4 col-md-4">
                             <a href="">
                                 <div class="well">
                                     <p>SHOP<br><span class="bottomText"><b>WOMENS</b></span></p>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="col-sm-4 col-md-4">
                             <a href="">
                                 <div class="well">
                                     <p>SHOP<br><span class="bottomText"><b>ACCESSORIES</b></span></p>
@@ -54,21 +54,21 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="col-sm-4 col-md-4">
                             <a href="">
                                 <div class="well">
                                     <p>SHOP<br><span class="bottomText"><b>OUR STORE</b></span></p>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="col-sm-4 col-md-4">
                             <a href="">
                                 <div class="well">
                                     <p>SHOP<br><span class="bottomText"><b>STORE LOCATION</b></span></p>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="col-sm-4 col-md-4">
                             <a href="">
                                 <div class="well">
                                     <p>SHOP<br><span class="bottomText"><b>CONTACT</b></span></p>
