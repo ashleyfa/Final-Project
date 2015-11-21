@@ -1,14 +1,14 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
-html, body{
-    background: #f1f1f1;
-    height: 100%;    
-    position: relative;
+html, body {
+  background: #f1f1f1;
+  height: 100%;
+  position: relative;
 }
 
-header, nav, section, footer{display: block;}
+header, nav, section, article, footer{display: block;}
 
 p{
     font-family: Helvetica, sans-serif;
@@ -24,6 +24,14 @@ a:hover{
     color: #006687;
 }
 
+ul{list-style: none; margin: 0; padding:0;}
+
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto -219px; 
+  height: auto;
+  padding: 0 0 219px;
+}
 
 #header_desc{
     background: #fff;
@@ -46,29 +54,30 @@ a.company_name:hover{
 }
 
 
+@media screen and (max-width: 400px){
+  a.company_name{
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-device-width: 400px){
+  a.company_name{
+    font-size: 50px;
+  }
+}
+
 #home{
-    display: block;
-    height: auto;
-    position: relative;
-    width: 100%;
-    margin: 10px auto;
-    background: #fff;
-    height: 100%;
-    min-height: calc(100vh-140px);
+  background: #fff;
+  margin: 10px auto;
+  height: 100%;
 }
 
 #home2{
-    margin-top: 30px;
-    position: relative;
+  margin-top: 20px;
+  height: 100%;
 }
-
-.bottomText{
-    color: #006687;
-}
-
 
 hr{
-    display: block;
     border: 0;
     border-top: 2px solid #006687;
     margin-bottom: 0px;
@@ -76,14 +85,15 @@ hr{
 
 }
 
-footer{
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+.push{
+  clear:both;
+}
+.footer, .wrapperp:after {
+  height: 219px; 
 }
 
-
-#footer_wrapper{
-    background-color: #fff;
+.footer {
+  background: #fff;
+  height: 100%;
 }
+
