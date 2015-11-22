@@ -1,7 +1,7 @@
 <?php
     $page_title = "Downtown Fashion";
-    include('head.php');
-    include('header.php');
+    include('main/head.php');
+    include('main/header.php');
 ?>
 
 <head>

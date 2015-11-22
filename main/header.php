@@ -24,8 +24,7 @@
                         </li>
                         <li><a href="/about">About Us</a></li>
                         <li><a href="/contact">Contact</a></li>
-                        <li><a href="/signup/">Sign Up</a></li>
-                        <li><a href="/signup/">Login</a></li>
+                        <li><a href="/signup/">Sign In/ Join Us</a></li>
                         <li><a href="cart">Cart(<span id="cart_count"></span>)</a></li>
                     </ul>
                 </div>

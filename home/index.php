@@ -1,11 +1,11 @@
     
 <?php
     $page_title = "Home - Downtown Fashion";
-    include('../head.php');
+    include('../main/head.php');
 ?>
 <head>
-    <link href="/home/style.css" rel="stylesheet" type="text/css">
-    <link href="/home/nav.css" rel="stylesheet" type="text/css">
+    <link href="../main/style.css" rel="stylesheet" type="text/css">
+    <link href="../main/nav.css" rel="stylesheet" type="text/css">
 </head>
 <div class ="wrapper">
     <div id ="header_desc">
@@ -15,7 +15,7 @@
             </div>
             <div class="push"></div>
             <?php 
-                include('../header.php');
+                include('../main/header.php');
             ?>
         </div>
     </div>
@@ -90,5 +90,5 @@
 </div>
 
 <?php 
-    include('../footer.php'); 
+    include('../main/footer.php'); 
 ?>
