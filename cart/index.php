@@ -35,10 +35,10 @@
         </div>
     </div>
 
-    <div id="signup">
+    <div id="cart">
         <div class="container">
             <article>
-            	<div id = "signup2">
+            	<div id = "cart2">
 					
             	</div>
                 <div class="push"></div>

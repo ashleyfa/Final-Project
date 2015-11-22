@@ -1,19 +1,35 @@
 <?php
     $page_title = "Downtown Fashion";
+    $navmenu = array(
+            "Home"=> "home",
+            "Men"=>"men",
+            "Women"=>"women",
+            "Kids"=>"kids",
+            "Accessories"=>"accessories",
+            "About"=>"about",
+            "Contact"=>"contact",
+            "Signup"=>"Signup",
+            "Cart"=>"cart",
+            "ShopNow"=>"home",
+        );
+    $bootstrapLinks = array(
+        "css"=>"bootstrap/css/bootstrap.min.css",
+        "js"=>"bootstrap/js/jquery-1.11.3.min.js",
+        );
     include('main/head.php');
     include('main/header.php');
 ?>
 
 <head>
-     <link href="/css/style.css" rel="stylesheet" type="text/css">
-    <link href="/css/home.css" rel="stylesheet" type="text/css"> 
+     <link href="main/frontpagenav.css" rel="stylesheet" type="text/css">
+    <link href="main/frontpage.css" rel="stylesheet" type="text/css"> 
 </head>
 <section id="main">
     <div class="container-fluid">
         <div clas="mainWrapper">
             <p id = "company_desc"><span id="company_name">Downtown Fashion</span><br>YOUR ONE STOP SHOP FOR ALL YOUR FORMAL WEAR
                <div id ="shop-box-wrapper">
-                    <a href="/home/">
+                    <a href=<?php echo $navmenu['ShopNow']?>>
                         <div class="shop-box"><p>SHOP NOW</p></div>
                      </a>
                  </div>
@@ -28,6 +44,6 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

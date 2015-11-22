@@ -35,10 +35,10 @@
         </div>
     </div>
 
-    <div id="signup">
+    <div id="contact">
         <div class="container">
             <article>
-            	<div id = "signup2">
+            	<div id = "contact2">
 					
             	</div>
                 <div class="push"></div>

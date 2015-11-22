@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $page_title ?></title>
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href=<?php echo $bootstrapLinks['css']?>>
     <link href='https://fonts.googleapis.com/css?family=Rochester' rel='stylesheet' type='text/css'>
-    <script src="/js/jquery-1.11.3.min.js"></script>
-    <script src="/js/script.js"></script>
+    <script src=<?php $bootstrapLinks['js']?>></script>
 </head>
 <body>
