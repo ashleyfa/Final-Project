@@ -1,5 +1,21 @@
 <?php
     $page_title = "Sign Up - Downtown Fashion";
+    $navmenu = array(
+            "Home"=> "../home",
+            "Men"=>"../men",
+            "Women"=>"../women",
+            "Kids"=>"../kids",
+            "Accessories"=>"../accessories",
+            "About"=>"../about",
+            "Contact"=>"../contact",
+            "Signup"=>"../signup",
+            "Cart"=>"../cart",
+        );
+    $bootstrapLinks = array(
+        "css"=>"../bootstrap/css/bootstrap.min.css",
+        "js"=>"../bootstrap/js/jquery-1.11.3.min.js",
+        );
+
     include('../main/head.php');
 ?>
 <head>

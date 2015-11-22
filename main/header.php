@@ -11,21 +11,21 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/home/">Home</a></li>
+                        <li><a href=<?php echo $navmenu['Home']?>> Home</a></li>
                         <li class="dropdown">
-                          <a class="dropdown-toggle" data-toggle="dropdown" href="/shop/">Shop
+                          <a class="dropdown-toggle" data-toggle="dropdown">Shop
                           <span class="caret"></span></a>
                           <ul class="dropdown-menu">
-                            <li><a href="#">Men</a></li>
-                            <li><a href="#">Women</a></li>
-                            <li><a href="#">Kids</a></li> 
-                            <li><a href="#">Accessories</a></li>
+                            <li><a href=<?php echo $navmenu['Men']?>>Men</a></li>
+                            <li><a href=<?php echo $navmenu['Women']?>>Women</a></li>
+                            <li><a href=<?php echo $navmenu['Kids']?>>Kids</a></li> 
+                            <li><a href=<?php echo $navmenu['Accessories']?>>Accessories</a></li>
                           </ul>
                         </li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/signup/">Sign In/ Join Us</a></li>
-                        <li><a href="cart">Cart(<span id="cart_count"></span>)</a></li>
+                        <li><a href=<?php echo $navmenu['About']?>>About Us</a></li>
+                        <li><a href=<?php echo $navmenu['Contact']?>>Contact</a></li>
+                        <li><a href=<?php echo $navmenu['Signup']?>>Sign In/ Join Us</a></li>
+                        <li><a href=<?php echo $navmenu['Cart']?>>Cart(<span id="cart_count"></span>)</a></li>
                     </ul>
                 </div>
             </div>
