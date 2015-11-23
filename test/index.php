@@ -8,13 +8,9 @@
 </head>
 <body> 
 
-<?php 
-require 'validation.php';
-?>
-
 <h2>PHP Form Validation Example</h2>
 <p><span class="error">* required field.</span></p>
-<form method="post" action="index.php"> 
+<form method="post" action="register.php"> 
    First Name: <input type="text" name="fname">
    <span class="error">* <?php echo $fnameErr;?></span>
    <br><br>

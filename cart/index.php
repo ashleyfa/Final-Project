@@ -2,12 +2,12 @@
     $page_title = "Sign Up - Downtown Fashion";
     $navmenu = array(
             "Home"=> "../home",
-            "Men"=>"../men",
-            "Women"=>"../women",
-            "Kids"=>"../kids",
-            "Accessories"=>"../accessories",
+            "Shop"=>"../shop",
+            "Men"=>"../shop/men",
+            "Women"=>"../shop/women",
+            "Kids"=>"../shop/kids",
+            "Accessories"=>"../shop/accessories",
             "About"=>"../about",
-            "Contact"=>"../contact",
             "Signup"=>"../signup",
             "Cart"=>"../cart",
         );
@@ -28,27 +28,19 @@
             <div id = "df_name">
                  <a href="/home/" class="company_name">Downtown Fashion</a>
             </div>
-            <div class="push"></div>
             <?php 
                 include('../main/header.php');
             ?>
         </div>
     </div>
 
-    <div id="cart">
-        <div class="container">
-            <article>
-            	<div id = "cart2">
-					
-            	</div>
-                <div class="push"></div>
-            </article>
-        </div>
-         <div class="push"></div>
+        <!-- Begin page content -->
+    <div class="container">
+      
     </div>
-    <div class="push"></div>
-</div>
-
 <?php 
     include('../main/footer.php'); 
 ?>
+
+
+</div>

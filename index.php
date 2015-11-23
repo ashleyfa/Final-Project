@@ -2,10 +2,10 @@
     $page_title = "Downtown Fashion";
     $navmenu = array(
             "Home"=> "home",
-            "Men"=>"men",
-            "Women"=>"women",
-            "Kids"=>"kids",
-            "Accessories"=>"accessories",
+            "Men"=>"shop/men",
+            "Women"=>"shop/women",
+            "Kids"=>"shop/kids",
+            "Accessories"=>"shop/accessories",
             "About"=>"about",
             "Contact"=>"contact",
             "Signup"=>"Signup",
