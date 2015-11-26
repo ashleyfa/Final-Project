@@ -1,23 +1,21 @@
-* {
-  margin: 0;
-}
 
-html, body {
-  background: #f1f1f1;
-  height: 100%;
+html,body {
   position: relative;
+  min-height: 100%;
+  background: #f1f1f1; 
 }
 
-header, nav, section, article, footer{display: block;}
+h4{
+  text-transform: uppercase;
+  color: #fff;
+}
+
 
 p{
     font-family: Helvetica, sans-serif;
 }
 
-a{
-    color: #000;
-    text-align: center;
-}
+a{text-decoration: none;}
 
 a:hover{
     text-decoration: none;
@@ -26,21 +24,51 @@ a:hover{
 
 ul{list-style: none; margin: 0; padding:0;}
 
-.wrapper {
-  min-height: 100%;
-  margin: 0 auto -219px; 
-  height: auto;
-  padding: 0 0 219px;
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  min-height: 240px;
+  height: 100%;
+  background-color: #3a3a3a;
 }
 
+input[type="text"]{
+  outline: none;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 35px;
+  padding: 5px;
+}
 
-/*************************
-* HEADER
-**************************/
+input[value]{
+  color: #c1c1c2;
+}
+
+input[type="submit"]{
+  width: 150px;
+  height: 35px;
+  text-transform: uppercase;
+  display: block;
+  background: #006687;
+  color: #fff;
+  border: none;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+
+/* HEADER
+------------------------------------------------- */
+
 #header_desc{
     background: #fff;
     width: 100%;
     height: auto;
+    box-shadow: 0 4px 2px -2px gray;
 }
 
 a.company_name{
@@ -69,57 +97,206 @@ a.company_name:hover{
   }
 }
 
-/*************************
-* HOME
-**************************/
 
-#home{
+/* HOME
+------------------------------------------------- */
+.homePromo{
+  background-image: url("../img/homePromo.png");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 300px;
+  width: 100%;
+}
+
+
+.shopMen{
+  background-image: url("../img/home-shop-men.jpg");
+  background-size: cover;
+  height: 150px;
+}
+
+.shopMen p, .shopKids p{
+  color: #000;
+  margin-top: 30px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.shopWomen{
+  background-image: url("../img/home-shop-women.jpg");
+  background-size: cover;
+  height: 150px; 
+}
+
+.shopWomen p{
+  color: #000;
+  margin-top:22px;
+  font-size: 40px;
+  text-align: center; 
+  line-height: 90%;
+}
+
+.shopKids{
+  background-image: url("../img/home-shop-kids.jpg");
+  background-size: cover;
+  height: 150px; 
+}
+
+.shopAccessories{
+  height: 150px;
+}
+
+.bottomText{
+  color: #006687;
+}
+/* HEADER
+------------------------------------------------- */
+#home, #men, #about, #signin-wrapper{
   background: #fff;
   margin: 10px auto;
+  min-height: calc(100vh - 435px);
+  padding-top: 20px;
+  padding-bottom: 20px;
   height: 100%;
+  box-shadow: 0 3px 2px -2px gray;
 }
 
-#home2{
-  margin-top: 20px;
-  height: 100%;
-}
-
-/*************************
-* SIGN UP/LOGIN
-**************************/
-
-#signup{
+/* MEN
+------------------------------------------------- 
+#men{
   background: #fff;
   margin: 10px auto;
+  min-height: calc(100vh - 435px);
+  padding-top: 20px;
+  padding-bottom: 20px;
   height: 100%;
+  box-shadow: 0 4px 2px -2px gray;
 }
 
-#signup2{
-  margin-top: 20px;
+/* ABOUT
+------------------------------------------------- 
+#about{
+  background: #fff;
+  margin: 10px auto;
+  min-height: calc(100vh - 435px);
+  padding-top: 20px;
+  padding-bottom: 20px;
   height: 100%;
+  box-shadow: 0 4px 2px -2px gray;
+}
+/* SIGN IN / JOIN
+------------------------------------------------- 
+#signin-wrapper{
+  background: #fff;
+  margin: 10px auto;
+  min-height: calc(100vh - 435px);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+  box-shadow: 0 4px 2px -2px gray;
 }
 
-/*************************
-* FOOTER
-**************************/
+/*
+--------------------------------------------------*/
+
+.signinpadding{
+  margin: 10px;
+}
+
+.login h4, .newuser h4{
+  color: #006687;
+}
+
+.login, .newuser{
+  background: #f0ece9;
+  min-height: calc(100vh - 500px);
+  border: 2px solid #fff;
+}
+
+.circle-wrapper{
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.circle-float{
+  margin: 0 auto;
+  float:center;
+}
+
+.circle{
+  margin: 0 auto;
+  color: #006687;
+}
+.required{
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+
+#createAccount-button{
+    background: #006687;
+    text-transform: uppercase;
+    color: #fff;
+    width: 170px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#createAccount-button:hover{
+  opacity: 0.6;
+}
+
+/* CART-LOGIN
+------------------------------------------------- */
+#cart-login-wrapper{
+  background: #fff;
+  margin: 10px auto;
+  min-height: calc(100vh - 435px);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+  box-shadow: 0 3px 2px -2px gray;
+}
+
+.cartloginpadding{
+  margin: 10px;
+}
+
+/* FOOTER
+------------------------------------------------- */
 
 hr{
     border: 0;
-    border-top: 2px solid #006687;
+    border-top: 2px solid #f1f1f1;
     margin-bottom: 0px;
     padding-bottom: 10px;
 
 }
 
-.push{
-  clear:both;
+.footer a{
+  color: #fff;
 }
-.footer, .wrapperp:after {
-  height: 219px; 
+.footer a:hover{
+  color: #dadada;
 }
-
-.footer {
-  background: #fff;
-  height: 100%;
+.footer ul{
+  color: #fff;
 }
-
+.footer-nav{
+  padding: 0 20px;
+}
+.storeHours{
+  padding: 0 20px;
+}
+.storelocation{
+  padding: 0 20px;
+}
+.copyright{
+  color: #fff;
+  background: #006687;
+  bottom: 0;
+  height: 30px;
+}

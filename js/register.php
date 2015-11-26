@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "DaG-Fkl.O9eA";
+$password = "w0lfhal3y";
 $dbname = "downtownfashion";
 
 // Create connection
