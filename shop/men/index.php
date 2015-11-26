@@ -2,6 +2,7 @@
     $page_title = "Sign Up - Downtown Fashion";
     $navmenu = array(
             "Home"=> "../../home/",
+            "Shop"=>"../../shop/",
             "Men"=>"../men",
             "Women"=>"../women",
             "Kids"=>"../kids",
