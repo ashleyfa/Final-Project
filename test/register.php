@@ -19,13 +19,13 @@
      * create the new user.  If not, it will display the 
      * proper error message.
      */
-    
-   require 'validation.php';
+   require '../db/connection.php';
+   require '../signup/validation.php';
    ?>
 
    <h2>PHP Form Validation Example</h2>
    <p><span class="error">* required field.</span></p>
-   <form method="post" action="register.php"> 
+   <form method="post" action="../js/register.php"> 
       First Name: <input type="text" name="fname">
       <span class="error">* <?php echo $fnameErr;?></span>
       <br><br>

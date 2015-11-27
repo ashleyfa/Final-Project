@@ -9,10 +9,9 @@
      * create the new user.  If not, it will display the 
      * proper error message.
      */
+
    require '../db/connection.php';
-   require '../signup/checkuser.php';
-   //require 'validation.php';
-    
+   require '../signup/validation.php';
 
     $page_title = "Sign Up - Downtown Fashion";
     $navmenu = array(
@@ -55,30 +54,26 @@
     <div id="signin-wrapper">
          <div class="container">
             <div class = "row">
+                <!--
                 <div class="col-xs-12 col-sm-6 login">
                     <h4>Returning User</h4>
                     <div class = "signinpadding">
                         <form method="post" action="index.php" class="form-horizontal">
                         <div class="form-group">
-                            <span id="message"><?php echo $_SESSION['loginerr']; ?></span>
                             <input type="text" name="email" id="email" value="Email Address" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
                             <input type="text" name="password" id="password" value="Password" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
                             <p style="text-align: right;"><i class="fa fa-question-circle"></i> Forgot password?</p>
                             <label><input type="checkbox" id="remember" name="remember"> Remember Me</label>
-                            <input type="submit" name="login" value="Login"> 
+                            <input type="submit" name="submit" value="Submit"> 
                         </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 newuser">
+                -->
+                <div class="col-xs-12 col-sm-12 newuser">
                     <h4>New Users</h4>
-                    <p>Create an account to track your orders, create a wishlist and more.</p>
-
-                    
+                    <span id="message"></p>
                     <div id ="createAcount-wrapper">
-                        <form action="register.php" method="post">
-                            <input type="submit" value="Register" id="register">
-                        </form>
                         <!--
                         <div id="createAccount-button" onclick="returnCreateAccount()">Create Account</div>
                         
@@ -99,15 +94,15 @@
                                 <span id="confirmMessage"class="error"><?php echo $repasswordErr;?></span>
                                 <input type="submit" name="submit" value="Create Account"> 
                           </form> doesnt work
-                            
-                            <form method="post" action="index.php"> 
-                               First Name: <input type="text" name="fname">
+                            -->
+                            <form method="post" action="register.php"> 
+                               First Name: <input type="text" name="fname" value="<?php echo $_SESSION['first'];?>">
                                <span class="error">* <?php echo $fnameErr;?></span>
                                <br><br>
-                               Last Name: <input type="text" name="lname">
+                               Last Name: <input type="text" name="lname" value="<?php echo $_SESSION['last'];?>">
                                <span class="error">* <?php echo $lnameErr;?></span>
                                <br><br>
-                               E-mail: <input type="text" name="email">
+                               E-mail: <input type="text" name="email" value="<?php echo $_SESSION['email'];?>">
                                <span class="error">* <?php echo $emailErr;?></span>
                                <br><br>
                                Password: <input type="text" id="pass1" name="password">
@@ -116,10 +111,10 @@
                                Re-enter Password: <input type="text" id="pass2" name="repassword" onkeyup="checkPass(); return false;">
                                <span id="confirmMessage"class="error">* <?php echo $repasswordErr;?></span>
                                <br><br>
+                               
                                <input type="submit" name="submit" value="Submit"> 
                             </form>
                         </div>
-                        -->
                     </div>
                 </div>
             </div>
