@@ -9,6 +9,6 @@
     <link rel="stylesheet" href=<?php echo $bootstrapLinks['css']?>>
     <link href='https://fonts.googleapis.com/css?family=Rochester' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <script src=<?php $bootstrapLinks['js']?>></script>
+    <script type="text/javascript" src=<?php echo $bootstrapLinks['js']?>></script>
 </head>
 <body>

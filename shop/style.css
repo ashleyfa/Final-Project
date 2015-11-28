@@ -6,68 +6,99 @@
 	border: 1px solid #E6E6E6;
 	width: 97.5%;
 }
-.shop-toolbar .sort {
-	float: left;
-	width:20.5%;
-}
-.sort{
-	padding: 3px 8px;
-}
-.sort-by{
-	color:#777;
-	font-size:0.85;
-}
-.mens-toolbar .pager {
-	padding: 3px 8px;
-	float: right;
-	margin: 0;
-	width:26.5%;
-}
-.pager .limiter {
-	float: right;
-	color:#777;
-	font-size:0.85em;
-}
-.pager .limiter label {
-	vertical-align: middle;
-}
-.pager .limiter select {
-	padding: 0;
-	margin: 0 0 1px;
-	vertical-align: middle;
-}
-.pager .pages {
-	margin: 0 30px 0 0;
-	float: right;
-}
-.pager .pages ol {
-	display: inline;
-}
 
-h3.page{
-	float:left;
+.pagination{
+	float: right;
 }
-.pager .pages ul li{
-	float:left;
-}
-ul.dc_pagination li {
-	float: left;
-	margin: 0px;
-	margin-left: 5px;
-	padding: 0px;
-}
-ul.dc_pagination li a {
-	color: #777;
-	display: block;
-	padding: 2px 4px 0px 0px;
-	text-decoration: none;
-	font-size: 0.85em;
-}
-ul.dc_pagination li a:hover{
-	color:#555;
-}
-
 .product_img{
 	width: 190px;
 	height: 250px;
+
+}
+
+.imgHover {
+    display: inline;
+    position: relative;
+
+}
+.imgHover .hover {
+    display: none;
+    position: absolute;
+    right:0;
+    z-index: 2;
+}
+
+.hover {
+	margin: 0 auto;
+}
+
+
+/* PRODUCT GRID
+--------------------- */
+
+ul.product-grid {
+	list-style: none;
+	font-size: 0px;
+}
+
+ul.product-grid li {
+	display: inline-block;
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+ul.product-grid li img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px;
+}
+
+ul.product-grid li p {
+	font-size: .9em;
+	line-height: 1.5em;
+	color: #999;
+}
+
+ul.product-grid {
+	list-style: none;
+	font-size: 0px;
+	margin-left: -2.5%; /* should match li left margin */
+}
+ul.product-grid li {
+	display: inline-block;
+	padding: 10px;
+	margin: 0 0 2.5% 2.5%;
+	background: #fff;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+
+@media (max-width: 480px) {
+	ul.grid-nav li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	ul.grid-nav li a {
+		display: block;
+	}
+	ul.product-grid {
+		margin-left: 0;
+	}
+	ul.product-grid li {
+		width: 100% !important; /* over-ride all li styles */
+		margin: 0 0 20px;
+	}
 }

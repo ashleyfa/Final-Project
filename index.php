@@ -8,7 +8,7 @@
             "Kids"=>"shop/kids",
             "Accessories"=>"shop/accessories",
             "About"=>"about",
-            "Login"=>"account/login"
+            "Login"=>"account/login",
             "Signup"=>"account/signup",
             "Cart"=>"cart",
             "ShopNow"=>"home",
