@@ -1,6 +1,6 @@
 <?php
 
-require '../db/connection.php';
+require '../../db/connection.php';
 session_start();
 $_SESSION['first'] = "";
 $_SESSION['last'] = "";

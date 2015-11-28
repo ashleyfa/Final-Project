@@ -10,8 +10,7 @@
                         <li><a href=<?php echo $navmenu['Shop']?>>Shop</a></li>
                         <li><a href=<?php echo $navmenu['Accessories']?>>Accessories</a></li>
                         <li><a href=<?php echo $navmenu['About']?>>About Us</a></li>
-                        <li><a href=<?php echo $navmenu['Contact']?>>Contact</a></li>
-                        <li><a href=<?php echo $navmenu['Signup']?>>Sign In / Join Us</a></li>
+                        <li><a href=<?php echo $navmenu['Account']?>>Account</a></li>
                         <li><a href=<?php echo $navmenu['Cart']?>>Cart(<span id="cart_count"></span>)</a></li>
                     </ul>
                 </div>

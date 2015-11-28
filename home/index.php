@@ -9,8 +9,8 @@
             "Kids"=>"../shop/kids",
             "Accessories"=>"../shop/accessories",
             "About"=>"../about",
-            "Contact"=>"../contact",
-            "Signup"=>"../signup",
+            "Login"=>"../account/login",
+            "Signup"=>"../account/signup",
             "Cart"=>"../cart",
         );
     $bootstrapLinks = array(

@@ -44,6 +44,7 @@ input[type="text"]{
 
 input[value]{
   color: #c1c1c2;
+
 }
 
 input[type="submit"]{
@@ -151,7 +152,7 @@ a.company_name:hover{
 }
 /* HEADER
 ------------------------------------------------- */
-#home, #men, #about, #signin-wrapper{
+#home, #shop, #about, #signin-wrapper, #shop-wrapper{
   background: #fff;
   margin: 10px auto;
   min-height: calc(100vh - 435px);
@@ -196,8 +197,17 @@ a.company_name:hover{
   box-shadow: 0 4px 2px -2px gray;
 }
 
-/*
---------------------------------------------------*/
+/* SIGN IN / JOIN
+------------------------------------------------- */
+
+
+.register input[type="text"]{
+  outline: none;
+  width: 80%;
+  margin-bottom: 10px;
+  height: 35px;
+  padding: 5px;
+}
 
 .signinpadding{
   margin: 10px;
@@ -208,11 +218,15 @@ a.company_name:hover{
 }
 
 .login, .newuser{
-  background: #f0ece9;
   min-height: calc(100vh - 500px);
   border: 2px solid #fff;
+  margin: 0 auto;
 }
 
+.newuser{
+  display: table-cell;
+  vertical-align: middle;
+}
 .circle-wrapper{
   overflow: hidden;
   margin: 0 auto;
@@ -248,6 +262,9 @@ a.company_name:hover{
 #createAccount-button:hover{
   opacity: 0.6;
 }
+
+
+
 
 /* CART-LOGIN
 ------------------------------------------------- */

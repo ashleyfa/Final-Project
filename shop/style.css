@@ -1,4 +1,4 @@
-.mens-toolbar {
+.shop-toolbar {
 	margin: 0 0 12px;
 	overflow: hidden;
 	background: #F7F7F7;
@@ -6,7 +6,7 @@
 	border: 1px solid #E6E6E6;
 	width: 97.5%;
 }
-.mens-toolbar .sort {
+.shop-toolbar .sort {
 	float: left;
 	width:20.5%;
 }
@@ -65,4 +65,9 @@ ul.dc_pagination li a {
 }
 ul.dc_pagination li a:hover{
 	color:#555;
+}
+
+.product_img{
+	width: 190px;
+	height: 250px;
 }

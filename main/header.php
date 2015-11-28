@@ -24,7 +24,8 @@
                           </ul>
                         </li>
                         <li><a href=<?php echo $navmenu['About']?>>About Us</a></li>
-                        <li><a href=<?php echo $navmenu['Signup']?>>Sign In / Join Us</a></li>
+                        <li><a href=<?php echo $navmenu['Login']?>>Login</a></li>
+                        <li><a href=<?php echo $navmenu['Signup']?>>Register</a></li>
                         <li><a href=<?php echo $navmenu['Cart']?>>Cart(<span id="cart_count"></span>)</a></li>
                     </ul>
                 </div>

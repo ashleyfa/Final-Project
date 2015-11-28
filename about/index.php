@@ -8,8 +8,8 @@
             "Kids"=>"../shop/kids",
             "Accessories"=>"../shop/accessories",
             "About"=>"../about",
-            "Contact"=>"../contact",
-            "Signup"=>"../signup",
+            "Login"=>"../account/login",
+            "Signup"=>"../account/signup",
             "Cart"=>"../cart",
         );
     $bootstrapLinks = array(
@@ -37,7 +37,10 @@
 
     <div id="about">
         <div class="container">
-            <div></div> <!-- forgot what this is called-->
+            <ol class="breadcrumb">
+                <li><a href=<?php echo $navmenu['Home']?>>Home</a></li>
+                <li class="active">About Downtown Fashion</li>
+            </ol>
             <h1>Our Mission</h1>
             <hr>
             afsfjaskfjakjfkasjfjasjgkasjgaksgjg

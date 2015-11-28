@@ -8,8 +8,8 @@
             "Kids"=>"../kids",
             "Accessories"=>"../accessories",
             "About"=>"../../about",
-            "Contact"=>"../../contact",
-            "Signup"=>"../../signup",
+            "Login"=>"../../account/login",
+            "Signup"=>"../../account/signup",
             "Cart"=>"../../cart",
         );
     $bootstrapLinks = array(
@@ -22,7 +22,7 @@
 <head>
     <link href="../../main/style.css" rel="stylesheet" type="text/css">
     <link href="../../main/nav.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="../../shop/style.css" rel="stylesheet" type="text/css">
 </head>
 <div class ="wrapper">
     <div id ="header_desc">
@@ -30,17 +30,22 @@
             <div id = "df_name">
                  <a href="../../home/" class="company_name">Downtown Fashion</a>
             </div>
-            <div class="push"></div>
+    
             <?php 
                 include('../../main/header.php');
             ?>
         </div>
     </div>
 
-    <div id="men">
+    <div id="shop">
         <div class="container">
+            <ol class="breadcrumb">
+                <li><a href=<?php echo $navmenu['Home']?>>Home</a></li>
+                <li><a href=<?php echo $navmenu['Shop']?>>Shop</a></li>
+                <li>Womens</li>
+            </ol>
 			<h2>Women</h2>
-                <div class="mens-toolbar">
+                <div class="shop-toolbar">
                     <div class="sort">
                         <div class="sort-by">
                             <label>Sort By</label>

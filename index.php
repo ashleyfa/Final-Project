@@ -8,8 +8,8 @@
             "Kids"=>"shop/kids",
             "Accessories"=>"shop/accessories",
             "About"=>"about",
-            "Contact"=>"contact",
-            "Signup"=>"Signup",
+            "Login"=>"account/login"
+            "Signup"=>"account/signup",
             "Cart"=>"cart",
             "ShopNow"=>"home",
         );

@@ -8,7 +8,8 @@
             "Kids"=>"../shop/kids",
             "Accessories"=>"../shop/accessories",
             "About"=>"../about",
-            "Signup"=>"../signup",
+            "Login"=>"../account/login",
+            "Signup"=>"../account/signup",
             "Cart"=>"../cart",
         );
     $bootstrapLinks = array(

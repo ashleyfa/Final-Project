@@ -14,7 +14,7 @@
 
 	// Credentials to the database
   // Connect to the database with $conn variable.
-  require '../db/connection.php';
+  require '../../db/connection.php';
 
    /* If user register successfully, they are directed here.
     * A session started and in the session array, the key is mapped to
