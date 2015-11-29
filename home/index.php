@@ -1,5 +1,5 @@
-    
 <?php
+    session_start();
     $page_title = "Home - Downtown Fashion";
     $navmenu = array(
             "Home"=> "../home",
@@ -12,10 +12,13 @@
             "Login"=>"../account/login",
             "Signup"=>"../account/signup",
             "Cart"=>"../cart",
+            "Account"=>"../account",
+            "Logout"=>"../main/logout.php",
         );
     $bootstrapLinks = array(
         "css"=>"../bootstrap/css/bootstrap.min.css",
         "js"=>"../bootstrap/js/jquery-1.11.3.min.js",
+        "bjs"=>"../bootstrap/js/bootstrap.min.js",
         );
 
     include('../main/head.php');
@@ -44,8 +47,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="well homePromo">
-                    PROMO
-                    
+                    PROMO 
                 </div>
             </div>
         </div>

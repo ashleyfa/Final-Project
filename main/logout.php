@@ -10,5 +10,5 @@ session_destroy(); //Then it destroys the session.
  * set to the login page.
  *
  */
-echo "<script>window.open('../../home/index.php','_self')</script>";
+echo "<script>window.open('../home/index.php','_self')</script>";
 ?>

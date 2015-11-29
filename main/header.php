@@ -24,9 +24,17 @@
                           </ul>
                         </li>
                         <li><a href=<?php echo $navmenu['About']?>>About Us</a></li>
-                        <li><a href=<?php echo $navmenu['Login']?>>Login</a></li>
-                        <li><a href=<?php echo $navmenu['Signup']?>>Register</a></li>
-                        <li><a href=<?php echo $navmenu['Cart']?>>Cart(<span id="cart_count"></span>)</a></li>
+                        <?php
+                            if($_SESSION['Login'] != "YES") { // Checks to see if user is not logged in and send them back to the login.php page.
+                                echo "<li><a href=".$navmenu['Login'].">Login</a></li>";
+                                echo "<li><a href=".$navmenu['Signup'].">Register</a></li>";
+                            }
+                            else{
+                                echo "<li><a href=".$navmenu['Account'].">Account</a></li>";
+                                echo "<li><a href=".$navmenu['Logout'].">Log out </a></li>";
+                            }
+                        ?>
+                        <li><a href=<?php echo $navmenu['Cart']?>>Cart(<?php echo count($_SESSION['cart_items']); ?>)</a></li>
                     </ul>
                 </div>
             </div>

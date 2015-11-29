@@ -1,13 +1,11 @@
 .shop-toolbar {
 	margin: 0 0 12px;
 	overflow: hidden;
-	background: #F7F7F7;
-	padding: 5px;
-	border: 1px solid #E6E6E6;
+
 	width: 97.5%;
 }
 
-.pagination{
+.shop-toolbar ul{
 	float: right;
 }
 .product_img{
@@ -33,6 +31,9 @@
 }
 
 
+.pagination{
+	margin: 0 auto;
+}
 /* PRODUCT GRID
 --------------------- */
 
@@ -56,19 +57,19 @@ ul.product-grid li {
 ul.product-grid li img {
 	max-width: 100%;
 	height: auto;
-	margin: 0 0 10px;
+	margin: 0 auto;
 }
 
 ul.product-grid li p {
-	font-size: .9em;
-	line-height: 1.5em;
+	font-size: 1.6em;
+	line-height: 1.3em;
 	color: #999;
 }
 
 ul.product-grid {
 	list-style: none;
 	font-size: 0px;
-	margin-left: -2.5%; /* should match li left margin */
+	margin-left: -0.5%; /* should match li left margin */
 }
 ul.product-grid li {
 	display: inline-block;
@@ -101,4 +102,61 @@ ul.product-grid li {
 		width: 100% !important; /* over-ride all li styles */
 		margin: 0 0 20px;
 	}
+}
+
+
+.img_view{
+	width: 300px;
+	height: 400px;
+}
+
+.size-option {
+     list-style-type:none;
+     margin:25px 0 0 0;
+     padding:0;
+}
+
+.size-option li {
+    float:left;
+    margin:0 5px 0 0;
+    width:80px;
+    height:40px;
+    position:relative;
+}
+
+.size-option label, .size-option input {
+    display:block;
+    position:absolute;
+    text-align: center;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.size-option input[type="radio"] {
+    opacity:0.01;
+    z-index:100;
+}
+
+.size-option input[type="radio"]:checked + label,
+.Checked + label {
+    background: #006687;
+}
+
+.size-option label {
+    padding:7px;
+    border:1px solid #CCC; 
+    cursor:pointer;
+    z-index:90;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+#quantity { padding:5px; width:35px; border: 1px solid #555; }
+
+.size-option label:hover {
+     background:#DDD;
+
 }

@@ -22,10 +22,13 @@
             "Login"=>"../../account/login",
             "Signup"=>"../../account/signup",
             "Cart"=>"../../cart",
+            "Account"=>"../../account",
+            "Logout"=>"../../main/logout.php",
         );
     $bootstrapLinks = array(
         "css"=>"../../bootstrap/css/bootstrap.min.css",
         "js"=>"../../bootstrap/js/jquery-1.11.3.min.js",
+        "bjs"=>"../../bootstrap/js/bootstrap.min.js",
         );
     include('../../main/head.php');
 ?>
@@ -60,7 +63,7 @@
                     <h4>New Users</h4>
                     <span id="message"></span>
                     <div id ="createAcount-wrapper">
-                        <form method="post" action="register.php" class="register"> 
+                        <form method="post" action="validation.php" class="register"> 
                             First Name<p><input type="text" name="fname" value="<?php echo $_SESSION['first'];?>"><span class="error">* <?php echo $fnameErr;?></span></p>
             
                             Last Name: <p><input type="text" name="lname" value="<?php echo $_SESSION['last'];?>">

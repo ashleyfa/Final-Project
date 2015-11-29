@@ -51,7 +51,7 @@
   		}
   		$_SESSION['Login'] = "YES"; //Store YES in the session array;
   		$_SESSION['email']=$email;  //Store email in the session array;
-  		echo "<script>window.open('home.php','_self')</script>";  // Direct user to home.php
+  		echo "<script>window.open('../account/home/home.php','_blank')</script>";  // Direct user to home.php
   	}
   	else {
   		$_SESSION['loginerr'] = "Wrong credentials.  Please try again.";

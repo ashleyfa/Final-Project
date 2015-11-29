@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 18, 2015 at 08:31 AM
+-- Generation Time: Nov 29, 2015 at 09:29 AM
 -- Server version: 5.7.9
--- PHP Version: 5.5.29
+-- PHP Version: 5.5.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -39,16 +39,59 @@ CREATE TABLE `Address` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Users`
+-- Table structure for table `men_product`
 --
 
-CREATE TABLE `Users` (
-  `ID` bigint(20) UNSIGNED NOT NULL,
-  `FirstName` varchar(35) NOT NULL,
-  `LastName` varchar(35) NOT NULL,
-  `Email` varchar(255) NOT NULL,
-  `Phone` int(10) NOT NULL
+CREATE TABLE `men_product` (
+  `ID` bigint(36) NOT NULL,
+  `url` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` varchar(100) NOT NULL,
+  `description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `men_product`
+--
+
+INSERT INTO `men_product` (`ID`, `url`, `name`, `price`, `description`) VALUES
+(1, 'img/suit1.jpg', 'black', '2.00', 'black'),
+(2, 'img/suit1.jpg', 'white', '4.00', 'white'),
+(3, 'img/suit1.jpg', 'black', '3.00', 'black'),
+(4, 'img/suit1.jpg', 'white', '5', 'white'),
+(5, 'img/suit1.jpg', 'purple', '1', 'purple'),
+(6, 'img/suit1.jpg', 'purple', '1', 'purple'),
+(7, 'img/suit1.jpg', 'yellow', '8', 'yellow'),
+(8, 'img/suit1.jpg', 'yellow', '8', 'yellow'),
+(9, 'img/suit1.jpg', 'green', '9', 'green'),
+(10, 'img/suit1.jpg', 'green', '9', 'green'),
+(11, 'img/suit1.jpg', 'orange', '2', 'orange'),
+(12, 'img/suit1.jpg', 'orange', '2', 'orange'),
+(13, 'img/suit1.jpg', 'red', '6', 'red'),
+(14, 'img/suit1.jpg', 'red', '6', 'red'),
+(15, 'img/suit1.jpg', 'blue', '7', 'blue'),
+(16, 'img/suit1.jpg', 'blue', '7', 'blue'),
+(17, 'img/suit1.jpg', 'gray', '11.00', 'gray');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `first_name` varchar(36) NOT NULL,
+  `last_name` varchar(36) NOT NULL,
+  `email` varchar(36) NOT NULL,
+  `password` varchar(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`first_name`, `last_name`, `email`, `password`) VALUES
+('ashley', 'fagaragan', 'aloha@yahoo.com', 'lalala');
 
 --
 -- Indexes for dumped tables
@@ -61,9 +104,9 @@ ALTER TABLE `Address`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `Users`
+-- Indexes for table `men_product`
 --
-ALTER TABLE `Users`
+ALTER TABLE `men_product`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -75,11 +118,6 @@ ALTER TABLE `Users`
 --
 ALTER TABLE `Address`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `Users`
---
-ALTER TABLE `Users`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -9,7 +9,6 @@
 <body> 
 
    <?php 
-
     /* 
      * validation.php
      *

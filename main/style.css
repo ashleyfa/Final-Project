@@ -152,7 +152,7 @@ a.company_name:hover{
 }
 /* HEADER
 ------------------------------------------------- */
-#home, #shop, #about, #signin-wrapper, #shop-wrapper{
+#home, #shop, #about, #signin-wrapper, #shop-wrapper, #cart{
   background: #fff;
   margin: 10px auto;
   min-height: calc(100vh - 435px);
