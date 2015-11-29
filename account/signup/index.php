@@ -36,6 +36,7 @@
     <link href="../../main/style.css" rel="stylesheet" type="text/css">
     <link href="../../main/nav.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../../js/passtest.js"></script>
+    <style type="text/css">.error {color: red;}</style>
 </head>
 
 <div class ="wrapper">
@@ -63,20 +64,20 @@
                     <h4>New Users</h4>
                     <span id="message"></span>
                     <div id ="createAcount-wrapper">
-                        <form method="post" action="validation.php" class="register"> 
-                            First Name<p><input type="text" name="fname" value="<?php echo $_SESSION['first'];?>"><span class="error">* <?php echo $fnameErr;?></span></p>
+                        <form method="post" action="index.php" class="register"> 
+                            First Name<p><input type="text" name="fname" value="<?php echo $_SESSION['first'];?>"><span class="error">* <br><?php echo $fnameErr;?></span></p>
             
                             Last Name: <p><input type="text" name="lname" value="<?php echo $_SESSION['last'];?>">
-                            <span class="error">* <?php echo $lnameErr;?></span></p>
+                            <span class="error">* <br><?php echo $lnameErr;?></span></p>
                            
                            E-mail: <p><input type="text" name="email" value="<?php echo $_SESSION['email'];?>">
-                           <span class="error">* <?php echo $emailErr;?></span></p>
+                           <span class="error">* <br><?php echo $emailErr;?></span></p>
                               
                            Password: <p><input type="text" id="pass1" name="password">
-                           <span class="error">* <?php echo $passwordErr;?></span></p>
+                           <span class="error">* <br><?php echo $passwordErr;?></span></p>
                         
                            Confirm Password: <p><input type="text" id="pass2" name="repassword" onkeyup="checkPass(); return false;">
-                           <span id="confirmMessage"class="error">* <?php echo $repasswordErr;?></span></p>                               
+                           <br><span id="confirmMessage"class="error">* <br><?php echo $repasswordErr;?></span></p>                               
                             <input type="submit" name="submit" value="Register"> or <a href=<?php echo $navmenu['Home']?>>Return to Store</a>
                         </form>
 
