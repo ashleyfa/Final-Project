@@ -1,5 +1,6 @@
 <?php
 session_start();
+
  
 // get the product id
 $id = isset($_GET['id']) ? $_GET['id'] : "";
@@ -22,7 +23,7 @@ if(array_key_exists($id, $_SESSION['cart_items'])){
  
 // else, add the item to the array
 else{
-    $_SESSION['cart_items'][$id][$category]=$name;
+    $_SESSION['cart_items'][$id]=$name;
  
     // redirect to product list and tell the user it was added to cart
     header('Location: product.php?action=added&id=' . $id . '&name=' . $name.'&category='.$category);
