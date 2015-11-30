@@ -47,6 +47,7 @@
   		while($row = $query->fetch_assoc()) {
   			$_SESSION['firstname'] = $row["first_name"]; // Stores firstname in a session array
   			$_SESSION['lastname'] = $row["last_name"]; // Stores lastname  in a session array
+        $_SESSION['id'] = $row["id"];
   		}
   		$_SESSION['Login'] = "YES"; //Store YES in the session array;
   		$_SESSION['email']=$email;  //Store email in the session array;

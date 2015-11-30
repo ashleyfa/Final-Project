@@ -1,5 +1,7 @@
 <?php
 session_start(); // Start up the php session
+require "../db/connection.php";
+require "changeemail.php";
 
 if($_SESSION['Login'] != "YES") { // Checks to see if user is not logged in and send them back to the login.php page.
 	header("Location: login.php"); 
@@ -13,10 +15,10 @@ echo "Welcome ". ucfirst($_SESSION['firstname']); // Welcomes the user by their 
 	<title></title>
 </head>
 <body>
+<form method="post" action="email.php">
+	Update Email: <input type="text" name="email" value=" <?php echo $_SESSION['email'] ?>">
 	<br>
-	<a href="email.php">Update Email</a><span>&nbsp;&nbsp;<?php echo $_SESSION['emailupdate'] ?></span><br>
-	<a href="password.php">Change password</a><br>
-	<a href="logout.php">Logout</a>
+	<input type="submit" name="submit" value="Submit">
+</form>
 </body>
 </html>
-
