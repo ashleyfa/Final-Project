@@ -1,3 +1,5 @@
+/* track progress
+---------------------------*/
 .track-progress li.done + li > span:before {
   border-left-color: #ccc;
 }
@@ -109,6 +111,59 @@
   }
   .track-progress[data-steps="4"] li { width: 360px; }
 
+}
+
+/*
+---------------------------------*/
+/* PRODUCT GRID
+--------------------- */
+
+
+
+ul.cart-item-grid li img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+ul.cart-item-grid li p {
+  font-size: 1.6em;
+  line-height: 1.3em;
+  color: #000;
+}
+
+ul.cart-item-grid {
+  list-style: none;
+  font-size: 0px;
+  margin-left: -0.5%; /* should match li left margin */
+}
+ul.cart-item-grid li {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 0 2.5% 0;
+  background: #f1f1f1;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  width: 100%;
+}
+
+
+@media (max-width: 480px) {
+  ul.grid-nav li {
+    display: block;
+    margin: 0 0 5px;
+  }
+  ul.grid-nav li a {
+    display: block;
+  }
+  ul.cart-item-grid {
+    margin-left: 0;
+  }
+  ul.cart-item-grid li {
+    width: 100% !important; /* over-ride all li styles */
+    margin: 0 0 20px;
+  }
 }
 
 

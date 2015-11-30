@@ -17,15 +17,23 @@
     $bootstrapLinks = array(
         "css"=>"../bootstrap/css/bootstrap.min.css",
         "js"=>"../bootstrap/js/jquery-1.11.3.min.js",
-        "bjs"=>"../../bootstrap/js/bootstrap.min.js",
+        "bjs"=>"../bootstrap/js/bootstrap.min.js",
         );
+
     session_start();
+    require '../db/connection.php';
+
+    $tprice = 0;
+    $subtotal =0;
+    $tax = 0;
+    $name = "";                       
     include('../main/head.php');
 ?>
 <head>
     <link href="../main/style.css" rel="stylesheet" type="text/css">
     <link href="../main/nav.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="../js/script.js" type="text/javascript"></script>
 </head>
 
 <div class ="wrapper">
@@ -60,44 +68,87 @@
 
             <h2>Shopping Cart</h2>
             <hr>
-            <?php
-                $action = isset($_GET['action']) ? $_GET['action'] : "";
-                $name = isset($_GET['name']) ? $_GET['name'] : "";
-                 
-                if($action=='removed'){
-                    echo "<div class='alert alert-info'>";
+            
+            <div class = "items_in_cart">
+                <?php
+                    $action = isset($_GET['action']) ? $_GET['action'] : "";
+                    $name = isset($_GET['name']) ? $_GET['name'] : "";
+                                                 
+                    if($action=='removed'){
+                        echo "<div class='alert alert-info'>";
                         echo "<strong>{$name}</strong> was removed from your cart!";
-                    echo "</div>";
-                }
-                 
-                else if($action=='quantity_updated'){
-                    echo "<div class='alert alert-info'>";
-                        echo "<strong>{$name}</strong> quantity was updated!";
-                    echo "</div>";
-                }
-                 
-                if(count($_SESSION['cart_items'])>0){
-                 
-                    // get the product ids
-                    $ids = "";
-                    foreach($_SESSION['cart_items'] as $id=>$value){
-                        $ids = $ids . $id . ",";
+                        echo "</div>";
                     }
-              
+                                                 
+                    else if($action=='quantity_updated'){
+                        echo "<div class='alert alert-info'>";
+                        echo "<strong>{$name}</strong> quantity was updated!";
+                        echo "</div>";
+                    }
+                ?>
+                <div class = "row">
+                    <div class = "col-sm-8 col-xs-12">
+                        <div class = "cart-header"><p><?php echo count($_SESSION['cart_items']); ?> item<span id = "sprice">price</span></p></div>
+                        <ul class = "cart-item-grid">
+                            <?php
+                                if(count($_SESSION['cart_items'])>0){
+                                 
+                                    // get the product ids
+                                    foreach($_SESSION['cart_items'] as $id=>$value){
+                                        $query= "SELECT id, url, name, price FROM ". $value['category']." WHERE id = ". $id;
+                                        $result = mysqli_query($conn, $query) or trigger_error("SQL", E_USER_ERROR);
+                                        $row = mysqli_fetch_assoc($result);
+
+                                        echo "<li>";
+                                        if($value['category'] == "men_product"){
+                                            echo "<img src = '../shop/men/".$row['url']."' style='float: left;' width='120px'>";
+                                        }
+                                        else if($value['category'] == "women_product"){
+                                            echo "<img src = '../shop/women/".$row['url']."' style='float: left;' width='120px'>";    
+                                        }
+                                        else if($value['category'] == "women_product"){
+                                            echo "<img src = '../shop/women/".$row['url']."' style='float: left;' width='120px'>";    
+                                        }
+
+                                        echo "<p style='float: left; padding-left: 10px;''>";
+                                        echo $row['name'];
+                                        echo "<br><br>Price: $".$row['price'];
+                                        echo "<br>Size: ".$value['size'];
+                                        echo "<br>Qty: ".$value['quantity'];
+
+                                        echo "<br><br><br>";
+                                        echo "<a href='#'>Edit</a> | <a href='remove_from_cart.php?id=".$id."&name=".$row['name']."'>Remove</a>";
+                                        echo "</p></li>";
+                                        $tprice = $tprice + $row['price'] * $value['quantity'];
+                                    }
+                                }
+                                else{
+                                   echo "<li><h2>Your shopping cart is empty...</h2><p>Time to check out the new collection!</p>";
+                                   echo "</li>";
+                                }
                  
-                    // remove the last comma
-                    $ids = rtrim($ids, ',');
-                 
-                    echo $ids;
-                }
-     
-                else{
-                    echo "<div class='alert alert-danger'>";
-                        echo "<strong>No products found</strong> in your cart!";
-                    echo "</div>";
-                }
- 
-            ?>
+                            ?>
+                        </ul>
+                    </div>
+                    <div class = "col-sm-4 col-xs-12">
+                        <div class = "cart-header"><p>checkout</p></div>
+                        <div class = "checkout-box">
+                            <p>Merchandise Total: <span id = "totalprice">$<?php echo $tprice; ?></span>
+                                <br>Shipping: <span id = "shipping">FREE</span>
+                                <br>Tax: <a href="#" data-toggle="popover" data-trigger="focus" data-content="The appropriate tax or duty will be applied to your order in checkout."><i class="fa fa-question-circle"></i></a> <span id = "tax">$<?php echo $tax; ?></span>
+                            </p>
+                            <hr>
+                            <p>Sub Total: <span id = "sub-total">$<?php $subtotal = $tprice + $tax; echo $subtotal;?></span></p>
+
+
+                            <form action ="#" method="post">
+                                <input type="submit" value="checkout" name="checkout" class="checkout-button">
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

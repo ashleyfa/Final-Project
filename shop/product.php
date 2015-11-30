@@ -64,8 +64,17 @@
             </ol>
             <div class = "row">
                 <div class = "col-sm-5">
-    
-                    <img class = "img_view" src = "men/img/suit1.jpg">
+                    <?php
+                        if($category == "men_product"){
+                            echo "<img class='img_view' src = '../shop/men/" . $row['url']."'>";
+                        }
+                        else if ($category == "women_product"){
+                            echo "<img class='img_view' src = '../shop/women/" . $row['url']."'>";
+                        }
+                        else if($category == "kids_product"){
+                            echo "<img class='img_view' src = '../shop/kids/" . $row['url']."'>";
+                        }
+                    ?>
 
                 </div>
                 <div class = "col-sm-7">
@@ -75,24 +84,24 @@
                         <p style="color: gray"><?php echo $row['description']?></p>
                         <br>
                     </p>
-                    <form method = "post" action =<?php echo "add_to_cart.php?id={$id}&name={$name}&category={$category}"?>>
+                    <form method = "POST" action =<?php echo "add_to_cart.php?id={$id}&name={$name}&category={$category}"?>>
                         <p><b>SIZE:</b> </p>
                         <ul class="size-option">
                             <li>
-                                <input type="radio" id="a25" name="amount" checked="checked" />
-                                <label for="a25">xs</label>
+                                <input type="radio" id = "xs" value ="xs" name="size" checked="checked" />
+                                <label for="xs">xs</label>
                             </li>
                             <li>
-                                <input type="radio" id="a50" name="amount" />
-                                <label for="a50">small</label>
+                                <input type="radio" id="sm" value = "sm" name="size" />
+                                <label for="sm">small</label>
                             </li>
                             <li>
-                                <input type="radio" id="a75" name="amount" />
-                                <label for="a75">medium</label>
+                                <input type="radio" id="md" value = "md" name="size" />
+                                <label for="md">medium</label>
                             </li>
                             <li>
-                                <input type="radio" id="a100" name="amount" />
-                                <label for="a100">large</label>
+                                <input type="radio" id="lg" value = "lg" name="size" />
+                                <label for="lg">large</label>
                             </li>
                         </ul>
                         <br><br><br>
