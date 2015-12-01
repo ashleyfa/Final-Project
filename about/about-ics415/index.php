@@ -47,9 +47,31 @@
                 <li><a href=<?php echo $navmenu['About']?>>About</a></li>
                 <li class="active">About ICS 415</li>
             </ol>
-            <h1>Our Mission</h1>
-            <hr>
-            afsfjaskfjakjfkasjfjasjgkasjgaksgjg
+            <h1>About</h1>
+            <p>Technology we used in the web site</p>
+            <hr style="color: #000">
+            <h3>Bootstrap:</h3>
+            <ul>
+                <li></li>
+            </ul>
+            <h3>Cascading Style Sheets (CSS):</h3>
+            <ul>
+                <li></li>
+            </ul>
+            <h3>PHP/mySQL:</h3>
+            <ul>
+                <li></li>
+            </ul>
+
+            <h3>Javascript:</h3>
+            <ul>
+                <li></li>
+            </ul>
+
+            <h3>jQuery</h3>
+            <ul>
+                <li></li>
+            </ul>
         </div>
     </div>
 </div>

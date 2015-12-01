@@ -68,7 +68,7 @@
                     <div class = "signinpadding">
                         <form method="post" action="index.php" class="form-horizontal">
                         <div class="form-group">
-                            <span id="message"><?php echo $_SESSION['loginerr']; ?></span>
+                            <span id="message" style="color: red"><?php echo $_SESSION['loginerr']; ?></span>
                             <input type="text" name="email" id="email" placeholder="Email Address" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
                             <input type="password" name="password" id="password" placeholder="Password" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
                             <p style="text-align: right;"><i class="fa fa-question-circle"></i> Forgot password?</p>

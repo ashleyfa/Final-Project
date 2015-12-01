@@ -69,6 +69,11 @@ input[type="submit"]:hover{
   opacity: 0.6;
 }
 
+
+thead th{
+  background: #3a3a3a;
+  color: #fff;
+}
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
@@ -201,23 +206,6 @@ a.company_name:hover{
   color: #006687;
 }
 
-@media screen and (max-width: 1260px){
-  .shopWomen p{
-    color: #000;
-    margin-top:22px;
-    font-size: 40px;
-    text-align: center; 
-    line-height: 90%;
-  }
-}
-
-@media screen and (max-width: 500px){
-  .shopMen p{
-      line-height: 200px;
-  }
-}
-
-
 
 
 /* HEADER
@@ -318,6 +306,13 @@ a.company_name:hover{
 }
 
 
+/* MYACCOUNT PAGE
+------------------------------------------------- */
+.accountInfo, .addressInfo{
+  border: 2px solid #000;
+  padding: 10px;
+}
+
 /* CART CHECKOUT
 ------------------------------------------------- */
 input.checkout-button{
@@ -373,7 +368,7 @@ hr{
     border: 0;
     border-top: 2px solid #f1f1f1;
     margin-bottom: 0px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 
 }
 

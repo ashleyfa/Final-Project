@@ -8,7 +8,7 @@
             "Kids"=>"../shop/kids",
             "Accessories"=>"../shop/accessories",
             "About"=>"../about",
-            "About-ICS415"=>"../../about/about-ics415",
+            "About-ICS415"=>"../about/about-ics415",
             "Login"=>"../account/login",
             "Signup"=>"../account/signup",
             "Cart"=>"../cart",

@@ -8,6 +8,13 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href=<?php echo $navmenu['Home']?>>Logo Here</a>
+                    <a class="navbar-brand pull-left hidden-lg visible-xs" href=<?php echo $navmenu['Cart']?>><i class="fa fa-shopping-cart"></i>
+                        ( <?php if(isset($_SESSION['cart_items'])){
+                                echo count($_SESSION['cart_items']); 
+                            }
+                            else{
+                                echo 0;
+                            } ?> )</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
 
