@@ -1,5 +1,5 @@
 <?php
-  session_start(); 
+  //session_start(); 
 
   /*
    * checkuser.php
@@ -33,7 +33,7 @@
       } 
   }
   
-  session_destroy(); //
+  //session_destroy(); //
   
   $loginErr = ""; //Shows error on login page if either the email or password are wrong
 
@@ -45,7 +45,8 @@
   	$query = $conn->query($sel_user);
 
   	if($query->num_rows === 1){ // If exactly 1 user exist from the query
-  		session_start();  // Start the session
+
+  		//session_start();  // Start the session
   		while($row = $query->fetch_assoc()) {
   			$_SESSION['firstname'] = $row["first_name"]; // Stores firstname in a session array
   			$_SESSION['lastname'] = $row["last_name"]; // Stores lastname  in a session array

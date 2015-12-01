@@ -85,7 +85,7 @@
                         <p style="color: gray"><?php echo $row['description']?></p>
                         <br>
                     </p>
-                    <form method = "POST" action =<?php echo "add_to_cart.php?id={$id}&name={$name}&category={$category}"?>>
+                    <form method = "POST" action ="<?php echo 'add_to_cart.php?id={$id}&name={$name}&category={$category}'?>">
                         <p><b>SIZE:</b> </p>
                         <ul class="size-option">
                             <li>
