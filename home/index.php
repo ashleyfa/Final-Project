@@ -98,23 +98,23 @@
         </div>
         <div class="row">
             <div class="col-sm-4 col-md-4">
-                <a href="">
-                    <div class="well shopAccesories">
+                <a href="../shop/accessories">
+                    <div class="well shopAccessories">
                         <p>SHOP<br><span class="bottomText"><b>ACCESSORIES</b></span></p>
                     </div>
                 </a>
             </div>
             <div class="col-sm-4 col-md-4">
-                <a href="">
+                <a href="../about/">
                     <div class="well ourstore">
                         <p><span class="bottomText"><b>OUR STORE</b></span></p>
                     </div>
                 </a>
             </div>
             <div class="col-sm-4 col-md-4">
-                <a href="">
-                    <div class="well">
-                        <p><span class="bottomText"><b>CONTACT</b></span></p>
+                <a href="../account/signup">
+                    <div class="well join">
+                        <p><span class="bottomText"><b>JOIN US</b></span></p>
                     </div>
                 </a>
             </div>

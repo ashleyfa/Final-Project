@@ -65,6 +65,9 @@ input[type="submit"]{
   border: none;
 }
 
+input[type="submit"]:hover{
+  opacity: 0.6;
+}
 
 /* Custom page CSS
 -------------------------------------------------- */
@@ -135,7 +138,11 @@ a.company_name:hover{
   height: 150px;
 }
 
-.shopMen p, .shopKids p{
+.shopMen:hover, .shopWomen:hover, .shopKids:hover, .shopAccessories:hover, .join:hover, .ourstore:hover{
+  opacity: 0.7;
+}
+
+.shopMen p, .shopWomen p, .shopKids p, .ourstore p, .join p{
   color: #000;
   margin-top: 30px;
   font-size: 40px;
@@ -148,18 +155,21 @@ a.company_name:hover{
   height: 150px; 
 }
 
-.shopWomen p{
-  color: #000;
-  margin-top:22px;
-  font-size: 40px;
-  text-align: center; 
-  line-height: 90%;
-}
+
 
 .shopKids{
   background-image: url("../img/home-shop-kids.jpg");
   background-size: cover;
   height: 150px; 
+}
+
+.shopAccessories{
+  background: #006687;
+  background-size: cover;
+  height: 150px;
+}
+
+.shopAccessories p{
   color: #000;
   margin-top:22px;
   font-size: 40px;
@@ -167,13 +177,49 @@ a.company_name:hover{
   line-height: 90%;
 }
 
-.shopAccessories{
+.shopAccessories .bottomText{
+  color: #fff;
+}
+
+.ourstore{
+  background: #fff;
+  background-size: cover;
   height: 150px;
+}
+
+.join{
+  background: #3a3a3a;
+  background-size: cover;
+  height: 150px;
+}
+
+.join .bottomText{
+  color: #fff;
 }
 
 .bottomText{
   color: #006687;
 }
+
+@media screen and (max-width: 1260px){
+  .shopWomen p{
+    color: #000;
+    margin-top:22px;
+    font-size: 40px;
+    text-align: center; 
+    line-height: 90%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .shopMen p{
+      line-height: 200px;
+  }
+}
+
+
+
+
 /* HEADER
 ------------------------------------------------- */
 #home, #shop, #about, #signin-wrapper, #shop-wrapper, #cart{
@@ -270,23 +316,6 @@ a.company_name:hover{
   text-transform: uppercase;
   font-size: 10px;
 }
-
-
-#createAccount-button{
-    background: #006687;
-    text-transform: uppercase;
-    color: #fff;
-    width: 170px;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-}
-
-#createAccount-button:hover{
-  opacity: 0.6;
-}
-
 
 
 /* CART CHECKOUT
