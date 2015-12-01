@@ -1,4 +1,5 @@
 <?php
+    session_start();
     /* 
      * validation.php
      *
@@ -10,6 +11,7 @@
      */
    require '../../db/connection.php';
    require '../../account/signup/validation.php';
+
     $page_title = "Sign Up - Downtown Fashion";
     $navmenu = array(
             "Home"=> "../../home",
@@ -19,6 +21,7 @@
             "Kids"=>"../../shop/kids",
             "Accessories"=>"../../shop/accessories",
             "About"=>"../../about",
+            "About-ICS415"=>"../../about/about-ics415",
             "Login"=>"../../account/login",
             "Signup"=>"../../account/signup",
             "Cart"=>"../../cart",
@@ -73,11 +76,11 @@
                            E-mail: <p><input type="text" name="email" value="<?php echo $_SESSION['email'];?>">
                            <span class="error">* <br><?php echo $emailErr;?></span></p>
                               
-                           Password: <p><input type="text" id="pass1" name="password">
+                           Password: <p><input type="password" id="pass1" name="password">
                            <span class="error">* <br><?php echo $passwordErr;?></span></p>
                         
-                           Confirm Password: <p><input type="text" id="pass2" name="repassword" onkeyup="checkPass(); return false;">
-                           <br><span id="confirmMessage"class="error">* <br><?php echo $repasswordErr;?></span></p>                               
+                           Confirm Password: <p><input type="password" id="pass2" name="repassword" onkeyup="checkPass(); return false;">
+                           <span id="confirmMessage"class="error">* <br><?php echo $repasswordErr;?></span></p>                               
                             <input type="submit" name="submit" value="Register"> or <a href=<?php echo $navmenu['Home']?>>Return to Store</a>
                         </form>
 

@@ -11,6 +11,7 @@
             "Login"=>"../account/login",
             "Signup"=>"../account/signup",
             "Account"=>"../account",
+            "About-ICS415"=>"../about/about-ics415",
             "Cart"=>"../cart",
             "Logout"=>"../main/logout.php",
         );

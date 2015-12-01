@@ -23,22 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Address`
---
-
-CREATE TABLE `Address` (
-  `ID` bigint(20) NOT NULL,
-  `Address` varchar(100) NOT NULL,
-  `Apt` text NOT NULL,
-  `City` varchar(100) NOT NULL,
-  `State` text NOT NULL,
-  `ZipCode` int(5) NOT NULL,
-  `Country` int(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `men_product`
 --
 

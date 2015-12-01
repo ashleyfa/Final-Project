@@ -23,18 +23,39 @@
                             <li><a href=<?php echo $navmenu['Accessories']?>>Accessories</a></li>
                           </ul>
                         </li>
-                        <li><a href=<?php echo $navmenu['About']?>>About Us</a></li>
+                        <li class="dropdown">
+                            <a href=<?php echo $navmenu['About']?>>About Us
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href=<?php echo $navmenu['About-ICS415']?>>About-ICS415</a></li>
+                            </ul>
+                        </li>
                         <?php
-                            if($_SESSION['Login'] != "YES") { // Checks to see if user is not logged in and send them back to the login.php page.
+                            if(isset($_SESSION['Login'])){
+                                if($_SESSION['Login'] != "YES") { // Checks to see if user is not logged in and send them back to the login.php page.
+                                echo "<li><a href=".$navmenu['Login'].">Login</a></li>";
+                                echo "<li><a href=".$navmenu['Signup'].">Register</a></li>";
+                                }
+                                else{
+                                    echo "<li><a href=".$navmenu['Account'].">Account</a></li>";
+                                    echo "<li><a href=".$navmenu['Logout'].">Log out </a></li>";
+                                }
+                            }
+                            else{
                                 echo "<li><a href=".$navmenu['Login'].">Login</a></li>";
                                 echo "<li><a href=".$navmenu['Signup'].">Register</a></li>";
                             }
+                        ?>
+                        <li><a href=<?php echo $navmenu['Cart']?>>Cart( <?php 
+                            if(isset($_SESSION['cart_items'])){
+                                echo count($_SESSION['cart_items']); 
+                            }
                             else{
-                                echo "<li><a href=".$navmenu['Account'].">Account</a></li>";
-                                echo "<li><a href=".$navmenu['Logout'].">Log out </a></li>";
+                                echo 0;
                             }
                         ?>
-                        <li><a href=<?php echo $navmenu['Cart']?>>Cart(<?php echo count($_SESSION['cart_items']); ?>)</a></li>
+
+                        )</a></li>
                     </ul>
                 </div>
             </div>

@@ -22,9 +22,10 @@
 .imgHover .hover {
     display: none;
     position: absolute;
-    right:0;
-    z-index: 2;
+    right: 0;
+ 
 }
+
 
 .hover {
 	margin: 0 auto;

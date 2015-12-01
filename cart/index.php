@@ -8,6 +8,7 @@
             "Kids"=>"../shop/kids",
             "Accessories"=>"../shop/accessories",
             "About"=>"../about",
+            "About-ICS415"=>"../about/about-ics415",
             "Login"=>"../account/login",
             "Signup"=>"../account/signup",
             "Cart"=>"../cart",
@@ -86,10 +87,22 @@
                         echo "</div>";
                     }
                 ?>
+            
                 <div class = "row">
-                    <div class = "col-sm-8 col-xs-12">
-                        <div class = "cart-header"><p><?php echo count($_SESSION['cart_items']); ?> item<span id = "sprice">price</span></p></div>
-                        <ul class = "cart-item-grid">
+                    <div class = "col-sm-8">
+                        <div class = "row">
+
+                        <div class="container">
+                            <div class = "col-xs-12 col-sm-8 item-cart-header">
+                                <?php
+                                if(isset($_SESSION['cart_items'])){
+                                    echo count($_SESSION['cart_items']); 
+                                }
+                                else{
+                                    echo 0;
+                                } 
+                                ?> ITEMS <span class = "pull-right">PRICE</span>
+                            </div>
                             <?php
                                 if(count($_SESSION['cart_items'])>0){
                                  
@@ -99,39 +112,41 @@
                                         $result = mysqli_query($conn, $query) or trigger_error("SQL", E_USER_ERROR);
                                         $row = mysqli_fetch_assoc($result);
 
-                                        echo "<li>";
-                                        if($value['category'] == "men_product"){
-                                            echo "<img src = '../shop/men/".$row['url']."' style='float: left;' width='120px'>";
-                                        }
-                                        else if($value['category'] == "women_product"){
-                                            echo "<img src = '../shop/women/".$row['url']."' style='float: left;' width='120px'>";    
-                                        }
-                                        else if($value['category'] == "women_product"){
-                                            echo "<img src = '../shop/women/".$row['url']."' style='float: left;' width='120px'>";    
-                                        }
+                                        echo "<div class = 'col-xs-12 col-sm-8 cart-grid'>";
 
-                                        echo "<p style='float: left; padding-left: 10px;''>";
-                                        echo $row['name'];
-                                        echo "<br><br>Price: $".$row['price'];
+                                        if($value['category'] == "men_product"){
+                                            echo "<img src = '../shop/men/".$row['url']."' style = 'float: left'; width='130px'>";
+                                        }
+                                        else if($value['category'] == "women_product"){
+                                            echo "<img src = '../shop/women/".$row['url']."' style = 'float: left'; width='130px'>";    
+                                        }
+                                        else if($value['category'] == "women_product"){
+                                            echo "<img src = '../shop/women/".$row['url']."' style = 'float: left'; width='130px'>";    
+                                        }
+                                       
+                                        echo "<p>";
+                                        echo "<h5 class>".$row['name']."<span class = 'pull-right'>$".$row['price']."</span></h5>";
+                                        echo "<br>Price: $".$row['price'];
                                         echo "<br>Size: ".$value['size'];
                                         echo "<br>Qty: ".$value['quantity'];
 
-                                        echo "<br><br><br>";
+                                        echo "<br><br>";
                                         echo "<a href='#'>Edit</a> | <a href='remove_from_cart.php?id=".$id."&name=".$row['name']."'>Remove</a>";
-                                        echo "</p></li>";
+                                        echo "</p></div>";
                                         $tprice = $tprice + $row['price'] * $value['quantity'];
                                     }
                                 }
                                 else{
-                                   echo "<li><h2>Your shopping cart is empty...</h2><p>Time to check out the new collection!</p>";
-                                   echo "</li>";
+                                   echo "<div class='col-xs-12 col-sm-8 cart-grid'><h2>Your shopping cart is empty...</h2><p>Time to check out the new collection!</p>";
+                                   echo "</div>";
                                 }
                  
                             ?>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class = "col-sm-4 col-xs-12">
-                        <div class = "cart-header"><p>checkout</p></div>
+                        <div class = "cart-header"><p style="padding-left: 10px;">checkout</p></div>
                         <div class = "checkout-box">
                             <p>Merchandise Total: <span id = "totalprice">$<?php echo $tprice; ?></span>
                                 <br>Shipping: <span id = "shipping">FREE</span>
@@ -141,7 +156,7 @@
                             <p>Sub Total: <span id = "sub-total">$<?php $subtotal = $tprice + $tax; echo $subtotal;?></span></p>
 
 
-                            <form action ="#" method="post">
+                            <form action ="checkout.php" method="post">
                                 <input type="submit" value="checkout" name="checkout" class="checkout-button">
                             </form>
 

@@ -42,6 +42,14 @@ input[type="text"]{
   padding: 5px;
 }
 
+input[type="password"][name="password"], input[type="password"][name="repassword"]{
+  outline: none;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 35px;
+  padding: 5px;
+}
+
 input[value]{
   color: #c1c1c2;
 
@@ -56,6 +64,7 @@ input[type="submit"]{
   color: #fff;
   border: none;
 }
+
 
 /* Custom page CSS
 -------------------------------------------------- */
@@ -101,14 +110,24 @@ a.company_name:hover{
 
 /* HOME
 ------------------------------------------------- */
-.homePromo{
-  background-image: url("../img/homePromo.png");
-  background-repeat: no-repeat;
-  background-size: cover; 
-  height: 300px;
-  width: 100%;
+
+.carousel-holder {
+    margin-bottom: 30px;
 }
 
+.slide-image {
+    width: 100%;
+}
+
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
 
 .shopMen{
   background-image: url("../img/home-shop-men.jpg");
@@ -141,6 +160,11 @@ a.company_name:hover{
   background-image: url("../img/home-shop-kids.jpg");
   background-size: cover;
   height: 150px; 
+  color: #000;
+  margin-top:22px;
+  font-size: 40px;
+  text-align: center; 
+  line-height: 90%;
 }
 
 .shopAccessories{
@@ -201,7 +225,7 @@ a.company_name:hover{
 ------------------------------------------------- */
 
 
-.register input[type="text"]{
+.register input[type="text"], .register input[type="password"]{
   outline: none;
   width: 80%;
   margin-bottom: 10px;
@@ -298,14 +322,13 @@ input.checkout-button{
 .cart-header{
   background: #3a3a3a;
   color: #fff;
-  padding-left:10px;
-  padding-right: 10px;
   text-transform: uppercase;
-  width: 100%;
 }
 
-.cart-header #sprice{
-  float: right;
+.item-cart-header{
+  background: #3a3a3a;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 #shopbox-wrapper{

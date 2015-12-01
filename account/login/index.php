@@ -1,4 +1,5 @@
 <?php
+    session_start();
     /* 
      * validation.php
      *
@@ -8,9 +9,9 @@
      * create the new user.  If not, it will display the 
      * proper error message.
      */
-   require '../../db/connection.php';
-   require '../../account/signup/checkuser.php';
-   //require 'validation.php';
+    require '../../db/connection.php';
+    require 'checkuser.php';
+    //require 'validation.php';
     
     $page_title = "Login - Downtown Fashion";
     $navmenu = array(
@@ -23,6 +24,7 @@
             "About"=>"../../about",
             "Login"=>"../../account/login",
             "Signup"=>"../../account/signup",
+            "About-ICS415"=>"../../about/about-ics415",
             "Cart"=>"../../cart",
             "Account"=>"../../account",
             "Logout"=>"../../main/logout.php",
@@ -67,8 +69,8 @@
                         <form method="post" action="index.php" class="form-horizontal">
                         <div class="form-group">
                             <span id="message"><?php echo $_SESSION['loginerr']; ?></span>
-                            <input type="text" name="email" id="email" value="Email Address" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
-                            <input type="text" name="password" id="password" value="Password" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+                            <input type="text" name="email" id="email" placeholder="Email Address" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+                            <input type="password" name="password" id="password" placeholder="Password" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
                             <p style="text-align: right;"><i class="fa fa-question-circle"></i> Forgot password?</p>
                             <label><input type="checkbox" id="remember" name="remember"> Remember Me</label>
                             <input type="submit" name="login" value="Login"> 

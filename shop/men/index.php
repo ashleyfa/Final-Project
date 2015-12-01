@@ -8,6 +8,7 @@
             "Kids"=>"../kids",
             "Accessories"=>"../accessories",
             "About"=>"../../about",
+            "About-ICS415"=>"../../about/about-ics415",
             "Login"=>"../../account/login",
             "Signup"=>"../../account/signup",
             "Cart"=>"../../cart",
@@ -97,7 +98,7 @@
                         $result = mysqli_query($conn, $sql) or trigger_error("SQL", E_USER_ERROR);
                         $row = mysqli_fetch_row($result);
                         $numrows = $row[0];
-                        $rowlimit = 16;
+                        $rowlimit = 12;
                         $totalpages = ceil($numrows / $rowlimit);
 
                         if (isset($_GET['currentpage']) && is_numeric($_GET['currentpage'])) {
@@ -151,19 +152,21 @@
                         </ul>
                     </div>
 
-                    <ul class = "product-grid">
-                    <?php
-                    while($list = mysqli_fetch_assoc($result)){
-                        echo "<li>";
-                        echo "<div class='imgHover'>";
-                        echo "<div class='hover'>";
-                        echo "<a data-target='#productModal' data-toggle='modal'>Quick View</a></div>";
-                        echo "<a href='../../shop/product.php?category=men_product&id=".$list['id']."'><img class = 'product_img' src=".$list['url']."></a>";
-                        echo "<p>".$list['name']."<br>$".$list['price']."</p></div>";
-                        echo "</li>";
-                    }
-                    ?>
-                    </ul>
+                    <div class = "row">
+                        <?php
+                        while($list = mysqli_fetch_assoc($result)){
+                            echo "<div class ='col-sm-4 col-md-3 col-lg-3' >";
+                            echo "<div class='thumbnail'>";
+                            echo "<div class='imgHover'>";
+                            echo "<div class='hover'>";
+                            echo "<a data-target='#productModal' data-toggle='modal'><span id ='quickview'>Quick View</span></a></div>";
+                            echo "<a href='../../shop/product.php?category=men_product&id=".$list['id']."'><img class = 'product_img' src=".$list['url']."></a></div>";
+                            echo "<div class='caption'>";
+                            echo "<h5>".$list['name']."<span class = 'pull-right'>$".$list['price']."</span></h5>";
+                            echo "</div></div></div>";
+                        }
+                        ?>
+                    </div>
 
                     <div class = "shop-toolbar">
                         <ul class = "pagination">

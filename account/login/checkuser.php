@@ -1,4 +1,5 @@
 <?php
+  session_start(); 
 
   /*
    * checkuser.php
@@ -25,13 +26,13 @@
     */
 
   $success = "";
-  session_start(); 
   $_SESSION['loginerr'] = "";
   if (isset($_SESSION['successfulReg'])) {
       if($_SESSION['successfulReg'] === 'YES') {
       $success = "Account created successfully.  Please login.";
       } 
   }
+  
   session_destroy(); //
   
   $loginErr = ""; //Shows error on login page if either the email or password are wrong
