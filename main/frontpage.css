@@ -1,9 +1,12 @@
 body{
-    background: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  background-image: url("http://www.justingillphoto.com/blog/wp-content/uploads/2014/12/Tala-Disney-Hall-63.jpg");
+background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   background-size:cover;/*this sets the image to fullscreen covering the whole screen*/  
+   /*css hack for ie*/     
+   filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.image.jpg',sizingMethod='scale');
+   -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='image.jpg',sizingMethod='scale')";
 
 }
 
@@ -64,7 +67,7 @@ MAIN PAGE
     }
 
     #company_desc{
-        margin-top: 100%;
+        margin-top: 50%;
         font-size: 12px;
         text-align: center;
         margin-right: 0px;

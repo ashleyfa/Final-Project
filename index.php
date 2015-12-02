@@ -8,7 +8,7 @@
             "Kids"=>"shop/kids",
             "Accessories"=>"shop/accessories",
             "About"=>"about",
-            "About-ICS415"=>"../../about/about-ics415",
+            "About-ICS415"=>"about/about-ics415",
             "Login"=>"account/login",
             "Signup"=>"account/signup",
             "Cart"=>"cart",
@@ -19,7 +19,7 @@
     $bootstrapLinks = array(
         "css"=>"bootstrap/css/bootstrap.min.css",
         "js"=>"bootstrap/js/jquery-1.11.3.min.js",
-        "bjs"=>"../../bootstrap/js/bootstrap.min.js",
+        "bjs"=>"bootstrap/js/bootstrap.min.js",
         );
     session_start();
     include('main/head.php');

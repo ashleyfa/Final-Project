@@ -9,7 +9,7 @@
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #000;  /*Sets the text hover color on navbar*/
+    color: #006687;  /*Sets the text hover color on navbar*/
 }
 .navbar-default .navbar-nav{
     font-family: Helvetica, sans-serif;
@@ -41,7 +41,29 @@
 }
 
 
-.navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {color: #f1f1f1;}
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {color: #000;}
+
+
+.navbar-default .navbar-nav .dropdown-menu > li > a{
+    color: #000;
+}
+
+.navbar-default .navbar-nav .dropdown-menu > li > a:hover{
+    color: #006687;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle{
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+    margin-top: 0;
+}
+
 
 @media screen and (max-width: 850px){
     .navbar-default .navbar-nav{
@@ -53,10 +75,10 @@
     .navbar-default{margin:0px}
     .navbar-default .navbar-nav{height: 100vh; margin-left: 20px;}
     .navbar-default .navbar-collapse{ border: transparent}
-    .navbar {background-color: #000; opacity: 0.8;}
-    .collapsing, .in {background-color: #000;
+    .navbar {background-color: #fff; opacity: 0.8;}
+    .collapsing, .in {background-color: #fff;
         opacity: 0.8; height: 100%;}
     .navbar-default .navbar-nav > li > a{
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid #000;
     }
-}
+

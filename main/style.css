@@ -308,9 +308,9 @@ a.company_name:hover{
 
 /* MYACCOUNT PAGE
 ------------------------------------------------- */
-.accountInfo, .addressInfo{
+.accountInfo{
   border: 2px solid #000;
-  padding: 10px;
+  margin:10px; padding:10px;
 }
 
 /* CART CHECKOUT

@@ -117,9 +117,11 @@
 
                         $offset = ($currentpage - 1) * $rowlimit;
 
-                        $sql = "SELECT id, name, price, url, description FROM men_product LIMIT $offset, $rowlimit";
+                        $sql = "SELECT product_id, name, price, url, description FROM men_product LIMIT $offset, $rowlimit";
                         $result = mysqli_query($conn, $sql) or trigger_error("SQL", E_USER_ERROR);
                     ?>
+
+                    
 
                     <div class = "shop-toolbar">
                         <ul class = "pagination">
@@ -160,9 +162,9 @@
                             echo "<div class='imgHover'>";
                             echo "<div class='hover'>";
                             echo "<a data-target='#productModal' data-toggle='modal'><span id ='quickview'>Quick View</span></a></div>";
-                            echo "<a href='../../shop/product.php?category=men_product&id=".$list['id']."'><img class = 'product_img' src=".$list['url']."></a></div>";
+                            echo "<a href='../../shop/product.php?category=men_product&product_id=".$list['product_id']."'><img style='height: 240px;' src=".$list['url']."></a></div>";
                             echo "<div class='caption'>";
-                            echo "<h5>".$list['name']."<span class = 'pull-right'>$".$list['price']."</span></h5>";
+                            echo "<h5>".$list['name']."<br>$".$list['price']."</h5>";
                             echo "</div></div></div>";
                         }
                         ?>

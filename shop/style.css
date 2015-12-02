@@ -8,17 +8,12 @@
 .shop-toolbar ul{
 	float: right;
 }
-.product_img{
-	width: 190px;
-	height: 250px;
-
-}
 
 .imgHover {
     display: inline;
     position: relative;
-
 }
+
 .imgHover .hover {
     display: none;
     position: absolute;

@@ -107,8 +107,8 @@
                                 if(count($_SESSION['cart_items'])>0){
                                  
                                     // get the product ids
-                                    foreach($_SESSION['cart_items'] as $id=>$value){
-                                        $query= "SELECT id, url, name, price FROM ". $value['category']." WHERE id = ". $id;
+                                    foreach($_SESSION['cart_items'] as $product_id=>$value){
+                                        $query= "SELECT url, price, name, description FROM ".$value['category']." WHERE product_id = ". $product_id;
                                         $result = mysqli_query($conn, $query) or trigger_error("SQL", E_USER_ERROR);
                                         $row = mysqli_fetch_assoc($result);
 
@@ -156,7 +156,7 @@
                             <p>Sub Total: <span id = "sub-total">$<?php $subtotal = $tprice + $tax; echo $subtotal;?></span></p>
 
 
-                            <form action ="checkout.php" method="post">
+                            <form action ="checkout.php?totalprice=<?php echo $subtotal; ?>" method="post">
                                 <input type="submit" value="checkout" name="checkout" class="checkout-button">
                             </form>
 

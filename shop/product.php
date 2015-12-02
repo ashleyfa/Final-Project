@@ -23,12 +23,12 @@
     session_start();
     require "../db/connection.php";
 
-    $sql = "SELECT id, url, price, name, description FROM ".$_GET['category']." WHERE id = ".$_GET['id'];
+    $sql = "SELECT product_id, url, price, name, description FROM ".$_GET['category']." WHERE product_id = ".$_GET['product_id'];
     $result = mysqli_query($conn, $sql) or trigger_error("SQL", E_USER_ERROR);
     $row = mysqli_fetch_assoc($result);
 
     $category = isset($_GET['category']) ? $_GET['category'] : "";
-    $id = isset($_GET['id']) ? $_GET['id'] : "";
+    $product_id = isset($_GET['product_id']) ? $_GET['product_id'] : "";
     include('../main/head.php');
 ?>
 <head>
@@ -85,7 +85,7 @@
                         <p style="color: gray"><?php echo $row['description']?></p>
                         <br>
                     </p>
-                    <form method = "POST" action ="<?php echo 'add_to_cart.php?id={$id}&name={$name}&category={$category}'?>">
+                    <form method = "POST" action ="<?php echo 'add_to_cart.php?product_id='.$product_id.'&name='.$name.'&category='.$category?>">
                         <p><b>SIZE:</b> </p>
                         <ul class="size-option">
                             <li>
